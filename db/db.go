@@ -3,7 +3,7 @@ package db
 import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres" // Use PostgreSQL in gorm
-	"../entity"
+	"github.com/katsuomi/gin-gorm-practice/entity"
 )
 
 var (

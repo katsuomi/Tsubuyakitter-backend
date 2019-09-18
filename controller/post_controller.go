@@ -1,19 +1,18 @@
-package post
+package controller
 
 import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-
-	"../service"
+	"github.com/katsuomi/gin-gorm-practice/service"
 )
 
 // Controller is post controlller
-type Controller struct{}
+type PostController struct{}
 
 // Index action: GET /posts
-func (pc Controller) Index(c *gin.Context) {
-	var s post.Service
+func (pc PostController) Index(c *gin.Context) {
+	var s service.PostService
 	p, err := s.GetAll()
 
 	if err != nil {
@@ -25,8 +24,8 @@ func (pc Controller) Index(c *gin.Context) {
 }
 
 // Create action: POST /posts
-func (pc Controller) Create(c *gin.Context) {
-	var s post.Service
+func (pc PostController) Create(c *gin.Context) {
+	var s service.PostService
 	p, err := s.CreateModel(c)
 
 	if err != nil {
@@ -38,9 +37,9 @@ func (pc Controller) Create(c *gin.Context) {
 }
 
 // Show action: GET /posts/:id
-func (pc Controller) Show(c *gin.Context) {
+func (pc PostController) Show(c *gin.Context) {
 	id := c.Params.ByName("id")
-	var s post.Service
+	var s service.PostService
 	p, err := s.GetByID(id)
 
 	if err != nil {
@@ -52,9 +51,9 @@ func (pc Controller) Show(c *gin.Context) {
 }
 
 // Update action: PUT /posts/:id
-func (pc Controller) Update(c *gin.Context) {
+func (pc PostController) Update(c *gin.Context) {
 	id := c.Params.ByName("id")
-	var s post.Service
+	var s service.PostService
 	p, err := s.UpdateByID(id, c)
 
 	if err != nil {
@@ -66,9 +65,9 @@ func (pc Controller) Update(c *gin.Context) {
 }
 
 // Delete action: DELETE /posts/:id
-func (pc Controller) Delete(c *gin.Context) {
+func (pc PostController) Delete(c *gin.Context) {
 	id := c.Params.ByName("id")
-	var s post.Service
+	var s service.PostService
 
 	if err := s.DeleteByID(id); err != nil {
 		c.AbortWithStatus(403)

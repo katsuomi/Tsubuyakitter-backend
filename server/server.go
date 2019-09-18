@@ -2,7 +2,7 @@ package server
 
 import (
 	"github.com/gin-gonic/gin"
-	"../controller"
+	"github.com/katsuomi/gin-gorm-practice/controller"
 )
 
 // Init is initialize server
@@ -16,7 +16,7 @@ func router() *gin.Engine {
 	u := r.Group("/users")
 	p := r.Group("/posts")
 	{
-		ctrl := user.Controller{}
+		ctrl := controller.UserController{}
 		u.GET("", ctrl.Index)
 		u.GET("/:id", ctrl.Show)
 		u.POST("", ctrl.Create)
@@ -24,7 +24,7 @@ func router() *gin.Engine {
 		u.DELETE("/:id", ctrl.Delete)
 	}
 	{
-		ctrl := post.Controller{}
+		ctrl := controller.PostController{}
 		p.GET("", ctrl.Index)
 		p.GET("/:id", ctrl.Show)
 		p.POST("", ctrl.Create)

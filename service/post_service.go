@@ -1,20 +1,20 @@
-package post
+package service
 
 import (
 	"github.com/gin-gonic/gin"
 
-	"../db"
-	"../entity"
+	"github.com/katsuomi/gin-gorm-practice/db"
+	"github.com/katsuomi/gin-gorm-practice/entity"
 )
 
 // Service procides post's behavior
-type Service struct{}
+type PostService struct{}
 
 // Post is alias of entity.Post struct
 type Post entity.Post
 
 // GetAll is get all Post
-func (s Service) GetAll() ([]Post, error) {
+func (s PostService) GetAll() ([]Post, error) {
 	db := db.GetDB()
 	var u []Post
 
@@ -26,7 +26,7 @@ func (s Service) GetAll() ([]Post, error) {
 }
 
 // CreateModel is create Post model
-func (s Service) CreateModel(c *gin.Context) (Post, error) {
+func (s PostService) CreateModel(c *gin.Context) (Post, error) {
 	db := db.GetDB()
 	var u Post
 
@@ -42,7 +42,7 @@ func (s Service) CreateModel(c *gin.Context) (Post, error) {
 }
 
 // GetByID is get a Post
-func (s Service) GetByID(id string) (Post, error) {
+func (s PostService) GetByID(id string) (Post, error) {
 	db := db.GetDB()
 	var u Post
 
@@ -54,7 +54,7 @@ func (s Service) GetByID(id string) (Post, error) {
 }
 
 // UpdateByID is update a Post
-func (s Service) UpdateByID(id string, c *gin.Context) (Post, error) {
+func (s PostService) UpdateByID(id string, c *gin.Context) (Post, error) {
 	db := db.GetDB()
 	var u Post
 
@@ -72,7 +72,7 @@ func (s Service) UpdateByID(id string, c *gin.Context) (Post, error) {
 }
 
 // DeleteByID is delete a Post
-func (s Service) DeleteByID(id string) error {
+func (s PostService) DeleteByID(id string) error {
 	db := db.GetDB()
 	var u Post
 
