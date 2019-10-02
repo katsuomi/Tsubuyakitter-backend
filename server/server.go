@@ -29,6 +29,9 @@ func router() *gin.Engine {
 		ctrl := controllers.PostController{}
 		p.GET("", ctrl.Index)
 		p.POST("", ctrl.Create)
+		p.GET("/:id", ctrl.Show)
+		p.PUT("/:id", ctrl.Update)
+		p.DELETE("/:id", ctrl.Delete)
 	}
 
 	return r

@@ -3,7 +3,6 @@ package repository
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/katsuomi/gin-gorm-twitter-api/db"
-	"github.com/katsuomi/gin-gorm-twitter-api/form/api"
 	"github.com/katsuomi/gin-gorm-twitter-api/models"
 )
 
@@ -42,19 +41,18 @@ func (_ UserRepository) CreateModel(c *gin.Context) (User, error) {
 }
 
 // GetByID is get a User by ID
-func (_ UserRepository) GetByID(id int) ([]api.Post, error) {
+func (_ UserRepository) GetByID(id int) (models.User, error) {
 	db := db.GetDB()
-	var u User
-	// var posts models.Post
 	var me models.User
-	var posts []api.Post
+	if err := db.Where("id = ?", id).First(&me).Error; err != nil {
+		return me, err
+	}
+	var posts []models.Post
 	db.Where("id = ?", id).First(&me)
 	db.Model(&me).Related(&posts)
-	if err := db.Where("id = ?", id).First(&u).Error; err != nil {
-		return posts, err
-	}
+	me.Posts = posts
 
-	return posts, nil
+	return me, nil
 }
 
 // UpdateByID is update a User

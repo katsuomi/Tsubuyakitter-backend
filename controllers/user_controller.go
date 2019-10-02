@@ -41,13 +41,13 @@ func (pc UserController) Show(c *gin.Context) {
 	id := c.Params.ByName("id")
 	var u repository.UserRepository
 	idInt, _ := strconv.Atoi(id)
-	p, err := u.GetByID(idInt)
+	user, err := u.GetByID(idInt)
 
 	if err != nil {
 		c.AbortWithStatus(400)
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 	} else {
-		c.JSON(200, p)
+		c.JSON(200, user)
 	}
 }
 
