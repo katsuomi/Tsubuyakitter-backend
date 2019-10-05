@@ -5,9 +5,9 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/katsuomi/gin-gorm-twitter-api/form/api"
-	"github.com/katsuomi/gin-gorm-twitter-api/models"
-	"github.com/katsuomi/gin-gorm-twitter-api/models/repository"
+	"github.com/katsuomi/gin-like-twitter-api/form/api"
+	"github.com/katsuomi/gin-like-twitter-api/models"
+	"github.com/katsuomi/gin-like-twitter-api/models/repository"
 )
 
 // Controller is user controlller

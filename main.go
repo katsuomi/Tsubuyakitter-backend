@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/katsuomi/gin-gorm-twitter-api/db"
-	"github.com/katsuomi/gin-gorm-twitter-api/server"
+	"github.com/katsuomi/gin-like-twitter-api/db"
+	"github.com/katsuomi/gin-like-twitter-api/server"
 )
 
 func main() {

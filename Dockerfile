@@ -1,11 +1,11 @@
 # ベースとなるDockerイメージ指定
 FROM golang:latest
 # コンテナ内に作業ディレクトリを作成
-RUN mkdir -p $GOPATH/src/github.com/katsuomi/gin-gorm-twitter-api
+RUN mkdir -p $GOPATH/src/github.com/katsuomi/gin-like-twitter-api
 # コンテナログイン時のディレクトリ指定
-WORKDIR $GOPATH/src/github.com/katsuomi/gin-gorm-twitter-api
+WORKDIR $GOPATH/src/github.com/katsuomi/gin-like-twitter-api
 # ホストのファイルをコンテナの作業ディレクトリに移行
-ADD . $GOPATH/src/github.com/katsuomi/gin-gorm-twitter-api
+ADD . $GOPATH/src/github.com/katsuomi/gin-like-twitter-api
 # 必要なパッケージをイメージにインストールする
 RUN go get -u github.com/gin-gonic/gin && \
   go get github.com/jinzhu/gorm && \

@@ -3,7 +3,7 @@ package db
 import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres" // Use PostgreSQL in gorm
-	"github.com/katsuomi/gin-gorm-twitter-api/models"
+	"github.com/katsuomi/gin-like-twitter-api/models"
 )
 
 var (
@@ -13,7 +13,7 @@ var (
 
 // Init is initialize db from main function
 func Init() {
-	db, err = gorm.Open("postgres", "host=db port=5432 user=gin-gorm-twitter-api dbname=gin-gorm-twitter-api password=gin-gorm-twitter-api sslmode=disable")
+	db, err = gorm.Open("postgres", "host=db port=5432 user=gin-like-twitter-api dbname=gin-like-twitter-api password=gin-like-twitter-api sslmode=disable")
 	if err != nil {
 		panic(err)
 	}
