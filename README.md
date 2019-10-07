@@ -1,4 +1,4 @@
-# GIN Like Twitter API
+# Gin Like Twitter API
 
 ## 💬 About
 
@@ -42,7 +42,7 @@ $ docker-compose up -d
 $ docker-compose ps
 
 # コンテナのシェルに入る
-$ docker-compose exec app /bin/bash 
+$ docker-compose exec gin-like-twitter-api /bin/bash 
 
 # サーバーの立ち上げ
 $ go run main.go
