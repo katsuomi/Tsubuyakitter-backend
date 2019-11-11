@@ -1,4 +1,4 @@
-# Gin Like Twitter API
+# LikeTwitterApp-backend
 
 ## 💬 About
 
