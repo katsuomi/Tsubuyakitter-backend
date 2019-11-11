@@ -2,8 +2,8 @@ package repository
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/katsuomi/gin-like-twitter-api/db"
-	"github.com/katsuomi/gin-like-twitter-api/models"
+	"github.com/katsuomi/LikeTwitterApp-backend/db"
+	"github.com/katsuomi/LikeTwitterApp-backend/models"
 )
 
 // Service procides user's behavior

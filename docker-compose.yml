@@ -1,17 +1,17 @@
 version: '3.7' # composeファイルのバーション指定
 services:
-  gin-like-twitter-api: # service名
+  LikeTwitterApp-backend: # service名
     build: . # ビルドに使用するDockerfileがあるディレクトリ指定
     tty: true # コンテナの起動永続化
     volumes:
-      - .:/go/src/github.com/katsuomi/gin-like-twitter-api # マウントディレクトリ指定
+      - .:/go/src/github.com/katsuomi/LikeTwitterApp-backend # マウントディレクトリ指定
     ports:
       - "8080:8080"
   db:
     image: postgres:alpine
     environment:
-      POSTGRES_USER: gin-like-twitter-api
-      POSTGRES_PASSWORD: gin-like-twitter-api
-      POSTGRES_DB: gin-like-twitter-api
+      POSTGRES_USER: LikeTwitterApp-backend
+      POSTGRES_PASSWORD: LikeTwitterApp-backend
+      POSTGRES_DB: LikeTwitterApp-backend
     ports:
       - 5432:5432

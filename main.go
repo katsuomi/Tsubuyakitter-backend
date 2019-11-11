@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/katsuomi/gin-like-twitter-api/db"
-	"github.com/katsuomi/gin-like-twitter-api/server"
+	"github.com/katsuomi/LikeTwitterApp-backend/db"
+	"github.com/katsuomi/LikeTwitterApp-backend/server"
 )
 
 func main() {

@@ -2,7 +2,7 @@ package server
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/katsuomi/gin-like-twitter-api/controllers"
+	"github.com/katsuomi/LikeTwitterApp-backend/controllers"
 )
 
 // Init is initialize server

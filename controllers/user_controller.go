@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/katsuomi/gin-like-twitter-api/models/repository"
+	"github.com/katsuomi/LikeTwitterApp-backend/models/repository"
 )
 
 // Controller is user controlller

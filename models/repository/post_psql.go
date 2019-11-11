@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-	"github.com/katsuomi/gin-like-twitter-api/db"
-	"github.com/katsuomi/gin-like-twitter-api/form/api"
-	"github.com/katsuomi/gin-like-twitter-api/models"
+	"github.com/katsuomi/LikeTwitterApp-backend/db"
+	"github.com/katsuomi/LikeTwitterApp-backend/form/api"
+	"github.com/katsuomi/LikeTwitterApp-backend/models"
 )
 
 // Service procides post's behavior

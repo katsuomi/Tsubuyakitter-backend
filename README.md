@@ -23,8 +23,8 @@ goのWebフレームワークGinを使ったtwitterもどきのバックエン�
 #### 2. ソースコードの取得
 
 ```bash
-git clone git@github.com:katsuomi/gin-like-twitter-api.git
-cd gin-like-twitter-api
+git clone git@github.com:katsuomi/LikeTwitterApp-backend.git
+cd LikeTwitterApp-backend
 ```
 
 #### 3. 起動
@@ -42,7 +42,7 @@ $ docker-compose up -d
 $ docker-compose ps
 
 # コンテナのシェルに入る
-$ docker-compose exec gin-like-twitter-api /bin/bash 
+$ docker-compose exec LikeTwitterApp-backend /bin/bash 
 
 # サーバーの立ち上げ
 $ go run main.go
