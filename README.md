@@ -42,7 +42,7 @@ $ docker-compose up -d
 $ docker-compose ps
 
 # コンテナのシェルに入る
-$ docker-compose exec LikeTwitterApp-backend /bin/bash 
+$ docker-compose exec like_twitter_app_backend /bin/bash 
 
 # サーバーの立ち上げ
 $ go run main.go
