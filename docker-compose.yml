@@ -1,6 +1,6 @@
 version: '3.7' # composeファイルのバーション指定
 services:
-  LikeTwitterApp-backend: # service名
+  like_twitter_app_backend: # service名
     build: . # ビルドに使用するDockerfileがあるディレクトリ指定
     tty: true # コンテナの起動永続化
     volumes:
