@@ -2,48 +2,49 @@
 
 ## 💬 About
 
-goのWebフレームワークGinを使ったtwitterもどきのバックエンドAPIです。
+This repository is backend on LikeTwitterApp.
 
 ## 🌻 Version
 
 ||Name|Version|What|
 |:-:|:-:|:-:|:-|
-|backend|golang|1.12.5|高級言語|
-||gin|1.4.0|Webフレームワーク|
-||gorm|1.9.8|ORマッパー|
-|DB|Postgresql|11.5|データベース|
+|backend|golang|1.12.5|High-level languages|
+||gin|1.4.0|Web FrameWork|
+||gorm|1.9.8|ORM|
+|DB|Postgresql|11.5|Database|
 
 ## 🔰 Install & Setup
 
-#### 1. Dockerのダウンロード
+#### 1. Download Docker
 
-下記より、`Docker For Mac` か `Docker For Windows`をインストールして下さい。  
+The following procedure, please install Docker For Mac or Docker For Windows
+
 [https://docs.docker.com/install/](https://docs.docker.com/install/)
 
-#### 2. ソースコードの取得
+#### 2. Getting source code
 
 ```bash
 git clone git@github.com:katsuomi/LikeTwitterApp-backend.git
 cd LikeTwitterApp-backend
 ```
 
-#### 3. 起動
+#### 3. Start-up
 
-下記の手順で、コンテナを起動させて下さい。
+The following procedure, start the container.
 
 ```bash
-# Dockerイメージの作成
+# Create Docker image
 $ docker-compose build
 
-# Dockerコンテナ起動
-$ docker-compose up -d
+# Start Docker container
+$ docker-compose up
 
-# 確認
+# confirm
 $ docker-compose ps
 
-# コンテナのシェルに入る
+# in container shell
 $ docker-compose exec like_twitter_app_backend /bin/bash 
 
-# サーバーの立ち上げ
+# run server
 $ go run main.go
 ```
